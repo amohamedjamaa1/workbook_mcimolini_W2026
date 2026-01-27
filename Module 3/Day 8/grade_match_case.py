@@ -17,5 +17,13 @@ match letter_grade:
     case _: # default case
         print("Could not determine numeric grade")
         gpa = 0.0
+# Equal to:
+# if letter_grade == "A":
+#   gpa = 4.0
+# elif letter_grade == "B":
+#   gpa = 3.3
+# ...
+# else:
+#   print...
 
 print(f"Your GPA is {gpa}")
