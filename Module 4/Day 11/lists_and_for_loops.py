@@ -6,27 +6,30 @@ days_of_the_week = ["Sunday",
                     "Friday",
                     "Saturday"]
 
-weekend_days = ("Saturday", "Sunday") # We can't edit this list once it's created
+weekend_days = ("Saturday", "Sunday") # This is a tuple. It can't be changed once defined or else we get errors.
 
-print(f"Our list: {days_of_the_week}")
-
-print("Days of the week are: ")
+# for var in list:
+print("Days of the week are:")
 for day in days_of_the_week:
     if day in weekend_days:
         print(f"{day} is a weekend day!")
     else:
-        print(f"{day} is a week day :(")
+        print(f"{day} is a weekday.")
 
-# enumerate(List) returns both the index and the value at that index from our list
+# enumerate(list) returns the index and the value for each item in the list
 for index, day in enumerate(days_of_the_week):
-    print(f"{day} is day number {index + 1} of the week") # Adding 1 as our index starts at 0
+    print(f"{day} is day number {index + 1} of the week.") # using + 1 to make our numbering match our expectations.
 
+# continue is a keyword that tells our loop to move on to the next item. No code after continue runs for that index.
 for day in days_of_the_week:
-    if "u" in day: # strings are just fancy lists, so we can use in to check for content inside of them
-        continue # continue skips the current list item and goes to the next
-    print(f"{day} does not contain a 'u'")
+    if "u" in day: # strings are just fancy lists, so we can use for and in on them
+        continue
+    print(f"{day} does not contain the letter 'u'")
 
+# break is a keyword that tells our loop to end. No loop code runs after break.
 for day in days_of_the_week:
     if day == "Wednesday":
-        break # break will end execution of our loop
-    print(f"{day} comes before Wednesday")
+        break
+    print(f"{day} is before Wednesday.")
+
+# any code after the loop will run after break
